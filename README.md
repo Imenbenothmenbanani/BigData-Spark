@@ -8,11 +8,11 @@ La qualité de l'air est un enjeu majeur pour la santé publique et l'environnem
 # 🎯 Objectif
 Développer un modèle de régression prédictive pour estimer les concentrations de :
 
-Dioxyde d’azote (NO₂)
+**Dioxyde d’azote (NO₂)**
 
-Monoxyde de carbone (CO)
+**Monoxyde de carbone (CO)**
 
-Ozone (O₃)
+**Ozone (O₃)**
 
 En s’appuyant sur des techniques de traitement de données et de modélisation supervisée.
 
