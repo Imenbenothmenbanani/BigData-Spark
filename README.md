@@ -105,13 +105,13 @@ docker run -p 8888:8888 -v /c/projet_bigdata:/home/jovyan/work --name fraud_dete
 
 ---
 
-### 2. Se connecter au conteneur Docker
+### ✅ 2. Se connecter au conteneur Docker
 docker exec -it fraud_detection bash
 
-### 3. Aller dans le répertoire de travail à l’intérieur du conteneur
+### ✅ 3. Aller dans le répertoire de travail à l’intérieur du conteneur
 cd /home/jovyan/work
 
-### 4. Exécuter le script Python
+### ✅ 4. Exécuter le script Python
 python MachineLearning_.py
 
 🧠 Le script sera exécuté ligne par ligne dans l’environnement PySpark.
