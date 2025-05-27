@@ -85,7 +85,6 @@ Interprétation et visualisation des résultats
 Rédaction technique et communication scientifique
 
 ---
----
 
 ## 🧪 Modèles de Prédiction et Résultats
 
