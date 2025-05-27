@@ -74,6 +74,68 @@ Graphiques de tendances et distribution des polluants
 Rédaction d’un rapport de résultats et conclusions
 
 ---
+---
+
+## 🧪 Modèles de Prédiction et Résultats
+
+Dans ce projet, deux approches ont été testées pour prédire les niveaux de pollution (CO, NO2, O3) :
+
+### ✅ 1. Approche 1 – **Model Simpl_OutPut**
+Chaque polluant (CO, NO2, O3) est prédit indépendamment à l'aide de modèles distincts.
+
+- **O3 (Ozone)**
+  - 🔍 Modèle : K-Nearest Neighbors (KNN)
+  - 📈 Résultats : `RMSE = 0.0508`, `R² = 0.9113`
+
+- **NO2 (Dioxyde d’azote)**
+  - 🔍 Modèle : Random Forest
+  - 📈 Résultats : `RMSE = 0.0567`, `R² = 0.8048`
+
+- **CO (Monoxyde de carbone)**
+  - 🔍 Modèle : K-Nearest Neighbors (KNN)
+  - 📈 Résultats : `RMSE = 0.0522`, `R² = 0.9063`
+
+---
+
+### ✅ 2. Approche 2 – **Model Multi-OutPut (MultiOutputRegressor)**
+Un seul modèle est entraîné pour prédire simultanément les trois variables (CO, NO2, O3).
+
+📊 **Performances des différents algorithmes testés avec MultiOutput :**
+
+| Modèle                       | RMSE        | R²          |
+|-----------------------------|-------------|-------------|
+| Random Forest               | 0.0496      | 0.8658      |
+| Gradient Boosting           | 0.0540      | 0.8412      |
+| Support Vector Machine (SVM)| 0.0556      | 0.8304      |
+| K-Nearest Neighbors (KNN)   | 0.0517      | 0.8545      |
+| ElasticNet                  | 0.1401      | -0.00003    |
+| XGBoost                     | 0.0512      | 0.8587      |
+
+
+### 🎯 Conclusion
+
+- L'approche **SimplOutPut** offre des performances légèrement meilleures pour chaque variable ciblée, notamment grâce à l'adaptation du modèle au type de variable.
+- L’approche **Multi_Output** est plus compacte et efficace en termes de code et de gestion des données, tout en maintenant des performances globales élevées.
+
+Les deux approches sont donc complémentaires selon le contexte d’utilisation (précision vs simplicité).
+### ✅ Choix Final du Modèle
+
+Après comparaison des deux approches (modèles simples vs. modèle multi-sortie) et analyse des résultats, j'ai opté pour les modèles suivants pour les prédictions finales :
+
+- 🔹 **O3 (Ozone)** : **K-Nearest Neighbors (KNN)**, pour ses très bonnes performances (`R² = 0.9113`)
+- 🔹 **CO (Monoxyde de carbone)** : **K-Nearest Neighbors (KNN)**, avec un 'R² = 0.9063'
+- 🔹 **NO2 (Dioxyde d’azote)** : **Random Forest** pour la prédiction de **NO2**, car c’est le modèle qui a donné les meilleurs résultats avec précision (`RMSE = 0.0567`)  pour cette variable dans l’approche par modèle simple.
+
+---
+
+### 🎯 Conclusion
+
+- L'approche **SimplOutPut** offre des performances légèrement meilleures pour chaque variable ciblée, notamment grâce à l'adaptation du modèle au type de variable.
+- L’approche **Multi_OutPut** est plus compacte et efficace en termes de code et de gestion des données, tout en maintenant des performances globales élevées.
+
+Les deux approches sont donc complémentaires selon le contexte d’utilisation (précision vs simplicité).
+
+
 
 # 📈 Compétences Développées
 Manipulation de données réelles (nettoyage, traitement des anomalies)
@@ -94,7 +156,7 @@ Voici les étapes à suivre pour exécuter le projet dans un conteneur Docker ba
 ### ✅ 1. Lancer le conteneur Docker
 
 
-docker run -p 8888:8888 -v /c/projet_bigdata:/home/jovyan/work --name fraud_detection jupyter/pyspark-notebook
+docker run -p 8888:8888 -v /c/projet_bigdata:/home/jovyan/work --name Pred_Air jupyter/pyspark-notebook
 
 *** Explication:
 * -v /c/projet_bigdata:/home/jovyan/work : Monte le dossier local dans le conteneur.
@@ -104,7 +166,7 @@ docker run -p 8888:8888 -v /c/projet_bigdata:/home/jovyan/work --name fraud_dete
 📁 Résultat : Tous les fichiers de /c/projet_bigdata sont visibles dans Jupyter sous le dossier work.
 
 ### ✅ 2. Se connecter au conteneur Docker
-docker exec -it fraud_detection bash
+docker exec -it Pred_Air bash
 
 ### ✅ 3. Aller dans le répertoire de travail à l’intérieur du conteneur
 cd /home/jovyan/work
