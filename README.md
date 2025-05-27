@@ -6,11 +6,16 @@ Ce projet utilise **PySpark** dans un environnement **Jupyter Notebook sous Dock
 
 ## 🚀 Objectifs du projet
 
-- Nettoyer et analyser un jeu de données environnemental.
-- Entraîner un modèle de machine learning (RandomForest).
-- Prédire les concentrations de CO, NO2, et O3 à partir de mesures capteurs.
-- Déployer et exécuter le projet via un conteneur Docker PySpark.
----
+- Nettoyer et analyser un jeu de données environnemental issu de capteurs de qualité de l'air.
+- Tester deux approches de modélisation :
+  - **Approche simple output** : un modèle entraîné séparément pour chaque polluant (CO, NO2, O3).
+  - **Approche multi-output** : un seul modèle entraîné pour prédire simultanément les trois polluants.
+- Expérimenter avec plusieurs algorithmes de machine learning : 
+  - **Random Forest**, **K-Nearest Neighbors (KNN)**, **Support Vector Machine (SVM)**, **Gradient Boosting**, **ElasticNet**, et **XGBoost**.
+- Évaluer les performances des modèles à l’aide de métriques telles que le **RMSE** et le **R²**.
+- Choisir le meilleur modèle pour chaque polluant : par exemple, **Random Forest** a été retenu pour la prédiction du **NO2** en raison de ses bonnes performances.
+- Déployer et exécuter le projet dans un environnement isolé à l’aide d’un **conteneur Docker basé sur l’image Jupyter PySpark Notebook**.
+
 
 ### 🧠 Technologies utilisées
 - PySpark pour la manipulation des données massives.
