@@ -188,6 +188,9 @@ Jupyter sera accessible à l’adresse affichée dans le terminal (ex. http://12
 - random_forest_model.pkl : Modèle sauvegardé.
 
 - README.md : Instructions du projet.
+  
+### ✅ Conclusion Générale
+Ce projet a permis de prédire efficacement les niveaux de CO, NO₂ et O₃ à partir de données capteurs, en testant plusieurs modèles de machine learning (Random Forest, XGBoost, KNN…). Après comparaison, Random Forest a été retenu pour la prédiction du NO₂ grâce à ses bonnes performances. L’ensemble a été intégré dans un conteneur Docker pour une exécution simple et reproductible avec PySpark.
 
 
 
