@@ -12,6 +12,20 @@ Ce projet utilise **PySpark** dans un environnement **Jupyter Notebook sous Dock
 - Déployer et exécuter le projet via un conteneur Docker PySpark.
 ---
 
+### 🧠 Technologies utilisées
+- PySpark pour la manipulation des données massives.
+
+- Scikit-learn pour l'entraînement du modèle.
+
+- Docker pour l'environnement isolé.
+
+- Jupyter Notebook pour l'exécution interactive.
+
+- Git & GitHub pour la gestion de version.
+
+- Pandas, NumPy, Matplotlib pour le traitement et la visualisation.
+
+
 # 🧪 Présentation des Polluants
 **🔸 O₃ — Ozone troposphérique**
 Origine : Formé par réaction photochimique entre des polluants (NOₓ, COV) et les rayons UV du soleil.
@@ -26,6 +40,7 @@ Origine : Combustion des carburants (trafic routier, industries).
 Effets : Provoque des inflammations des voies respiratoires et contribue à la formation d’ozone.
 
 Caractéristique : Indicateur principal de la pollution urbaine.
+
 **🔸 CO — Monoxyde de carbone**
 Origine : Résulte d’une combustion incomplète (véhicules, chauffage domestique).
 
@@ -78,7 +93,7 @@ Voici les étapes à suivre pour exécuter le projet dans un conteneur Docker ba
 
 ### ✅ 1. Lancer le conteneur Docker
 
-```bash
+
 docker run -p 8888:8888 -v /c/projet_bigdata:/home/jovyan/work --name fraud_detection jupyter/pyspark-notebook
 
 ## Explication:
@@ -89,4 +104,28 @@ docker run -p 8888:8888 -v /c/projet_bigdata:/home/jovyan/work --name fraud_dete
 📁 Résultat : Tous les fichiers de /c/projet_bigdata sont visibles dans Jupyter sous le dossier work.
 
 ---
+
+### 2. Se connecter au conteneur Docker
+docker exec -it fraud_detection bash
+
+### 3. Aller dans le répertoire de travail à l’intérieur du conteneur
+cd /home/jovyan/work
+
+### 4. Exécuter le script Python
+python MachineLearning_.py
+
+🧠 Le script sera exécuté ligne par ligne dans l’environnement PySpark.
+
+Jupyter sera accessible à l’adresse affichée dans le terminal (ex. http://127.0.0.1:8888).
+
+### Contenu du projet
+- MachineLearning_.ipynb : Notebook principal contenant les analyses.
+
+- MachineLearning_.py : Script Python exécutable automatiquement.
+
+- random_forest_model.pkl : Modèle sauvegardé.
+
+- README.md : Instructions du projet.
+
+
 
