@@ -21,8 +21,6 @@ Ce projet utilise **PySpark** dans un environnement **Jupyter Notebook sous Dock
 
 - Jupyter Notebook pour l'exécution interactive.
 
-- Git & GitHub pour la gestion de version.
-
 - Pandas, NumPy, Matplotlib pour le traitement et la visualisation.
 
 
