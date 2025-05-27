@@ -12,8 +12,6 @@ Ce projet utilise **PySpark** dans un environnement **Jupyter Notebook sous Dock
   - **Approche multi-output** : un seul modèle entraîné pour prédire simultanément les trois polluants.
 - Expérimenter avec plusieurs algorithmes de machine learning : 
   - **Random Forest**, **K-Nearest Neighbors (KNN)**, **Support Vector Machine (SVM)**, **Gradient Boosting**, **ElasticNet**, et **XGBoost**.
-- Évaluer les performances des modèles à l’aide de métriques telles que le **RMSE** et le **R²**.
-- Choisir le meilleur modèle pour chaque polluant : par exemple, **Random Forest** a été retenu pour la prédiction du **NO2** en raison de ses bonnes performances.
 - Déployer et exécuter le projet dans un environnement isolé à l’aide d’un **conteneur Docker basé sur l’image Jupyter PySpark Notebook**.
 
 
