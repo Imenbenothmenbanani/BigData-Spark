@@ -74,6 +74,16 @@ Graphiques de tendances et distribution des polluants
 Rédaction d’un rapport de résultats et conclusions
 
 ---
+# 📈 Compétences Développées
+Manipulation de données réelles (nettoyage, traitement des anomalies)
+
+Implémentation et évaluation de modèles de régression
+
+Interprétation et visualisation des résultats
+
+Rédaction technique et communication scientifique
+
+---
 ---
 
 ## 🧪 Modèles de Prédiction et Résultats
@@ -135,18 +145,6 @@ Après comparaison des deux approches (modèles simples vs. modèle multi-sortie
 
 Les deux approches sont donc complémentaires selon le contexte d’utilisation (précision vs simplicité).
 
-
-
-# 📈 Compétences Développées
-Manipulation de données réelles (nettoyage, traitement des anomalies)
-
-Implémentation et évaluation de modèles de régression
-
-Interprétation et visualisation des résultats
-
-Rédaction technique et communication scientifique
-
----
 
 
 ## 🐳 Utilisation de Docker
