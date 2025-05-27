@@ -1,22 +1,17 @@
-# BigData-Spark
----
-# 🌍 Prédiction de la Qualité de l'Air : Analyse et Modélisation avec des Données Réelles
-# 📌 Contexte du Projet
-La qualité de l'air est un enjeu majeur pour la santé publique et l'environnement. Ce projet vise à développer un modèle prédictif capable d'estimer les niveaux de pollution atmosphérique — en particulier ceux des gaz NO₂, CO et O₃ — à partir de données environnementales.
+# 🌍 Projet Big Data – Prédiction avec PySpark
+
+Ce projet utilise **PySpark** dans un environnement **Jupyter Notebook sous Docker** pour traiter des données, entraîner des modèles de machine learning, et effectuer des prédictions sur les niveaux de pollution de l'air (CO, NO2, O3).
 
 ---
-# 🎯 Objectif
-Développer un modèle de régression prédictive pour estimer les concentrations de :
 
-**Dioxyde d’azote (NO₂)**
+## 🚀 Objectifs du projet
 
-**Monoxyde de carbone (CO)**
-
-**Ozone (O₃)**
-
-En s’appuyant sur des techniques de traitement de données et de modélisation supervisée.
-
+- Nettoyer et analyser un jeu de données environnemental.
+- Entraîner un modèle de machine learning (RandomForest).
+- Prédire les concentrations de CO, NO2, et O3 à partir de mesures capteurs.
+- Déployer et exécuter le projet via un conteneur Docker PySpark.
 ---
+
 # 🧪 Présentation des Polluants
 **🔸 O₃ — Ozone troposphérique**
 Origine : Formé par réaction photochimique entre des polluants (NOₓ, COV) et les rayons UV du soleil.
@@ -73,3 +68,25 @@ Implémentation et évaluation de modèles de régression
 Interprétation et visualisation des résultats
 
 Rédaction technique et communication scientifique
+
+---
+
+
+## 🐳 Utilisation de Docker
+
+Voici les étapes à suivre pour exécuter le projet dans un conteneur Docker basé sur l’image `jupyter/pyspark-notebook`.
+
+### ✅ 1. Lancer le conteneur Docker
+
+```bash
+docker run -p 8888:8888 -v /c/projet_bigdata:/home/jovyan/work --name fraud_detection jupyter/pyspark-notebook
+
+## Explication:
+* -v /c/projet_bigdata:/home/jovyan/work : Monte le dossier local dans le conteneur.
+
+* /home/jovyan/work : Répertoire de travail dans le conteneur.
+
+📁 Résultat : Tous les fichiers de /c/projet_bigdata sont visibles dans Jupyter sous le dossier work.
+
+---
+
