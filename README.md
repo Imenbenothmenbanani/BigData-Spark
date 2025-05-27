@@ -96,14 +96,12 @@ Voici les étapes à suivre pour exécuter le projet dans un conteneur Docker ba
 
 docker run -p 8888:8888 -v /c/projet_bigdata:/home/jovyan/work --name fraud_detection jupyter/pyspark-notebook
 
-## Explication:
+*** Explication:
 * -v /c/projet_bigdata:/home/jovyan/work : Monte le dossier local dans le conteneur.
 
 * /home/jovyan/work : Répertoire de travail dans le conteneur.
 
 📁 Résultat : Tous les fichiers de /c/projet_bigdata sont visibles dans Jupyter sous le dossier work.
-
----
 
 ### ✅ 2. Se connecter au conteneur Docker
 docker exec -it fraud_detection bash
@@ -114,6 +112,7 @@ cd /home/jovyan/work
 ### ✅ 4. Exécuter le script Python
 python MachineLearning_.py
 
+---
 🧠 Le script sera exécuté ligne par ligne dans l’environnement PySpark.
 
 Jupyter sera accessible à l’adresse affichée dans le terminal (ex. http://127.0.0.1:8888).
